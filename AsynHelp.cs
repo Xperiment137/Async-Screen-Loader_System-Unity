@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class AsynHelp : MonoBehaviour
 {
-    private string Escena = "Pantalla de carga";
+    private string Escena = "Pantalla de carga"; // The name of your loading scene
   
 
     void Start()
@@ -15,7 +15,7 @@ public class AsynHelp : MonoBehaviour
 
     }
 
-    public void LoadScene(int move)
+    public void LoadScene(int move) // idea of use : button.onClick.AddListener(LoadScene(1));
     {
         PlayerPrefs.SetInt("Escena", move );
         PlayerPrefs.Save();
