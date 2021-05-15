@@ -1,4 +1,9 @@
-﻿using System.Collections;
+ // put this script in your Loading screen when it start it will load the next screen using the number of playerpref in the scene array 
+ // so you only need to put AsyncHelp in each scene and call the load function with thw number of the scene (position in the array ) you want to load.
+//It will save this number, load your Loading Scene and then Asynload script will use the number to find and load the final scene. All async amd fast :)
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,7 +19,7 @@ public class AsyLoader : MonoBehaviour
     private void Awake()
     {
        
-        selector = PlayerPrefs.GetInt("Escena"); // put this script in your Loading screen when it start it will load the next screen using the number of playerpref in the scene array 
+        selector = PlayerPrefs.GetInt("Escena");
         Escena = ArrayEscenas[selector];
     }
     void Start()
